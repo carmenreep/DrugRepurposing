@@ -1,0 +1,29 @@
+/* includes alternating gray and white with on-hover color */
+
+.mystyle {
+    font-size: 11pt; 
+    font-family: Arial;
+    border-collapse: collapse; 
+    text-align: left;
+    border: 0;
+
+}
+
+.mystyle thead th {
+  background-color: SeaGreen; /*#04AA6D;*/
+  color: white;
+}
+
+.mystyle td, th {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mystyle tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.mystyle tr:hover {
+    cursor: pointer;
+    background-color: YellowGreen
+}

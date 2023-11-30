@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Existing disease graphs</h3>
+Choose an existing disease graph from the list below.
+The date shows the creation of the graph.
+If the disease of interest not in list, or a newer version is wanted, create a new graph with the input box at the bottom of this page. 
+</br></br>
+<ul>
+{% for folder in folders %}
+    <li><a href="{{ url_for('symptoms_from_folder', diseasename=folder) }}">{{ folder }} </a></li>
+{% endfor %}
+</ul>
+    
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+				<h3>Create new disease graph</h3>
+                (Note: this may take a while. Please be patient.)
+				<div class="form-group">
+                    {{ form.MIMPhenoType.label(class="form-control-label") }}
+
+                    {% if form.MIMPhenoType.errors %}
+                        {{ form.MIMPhenoType(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.MIMPhenoType.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.MIMPhenoType(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+          </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn") }}
+            </div>
+        </form>
+    
+{% endblock content %}

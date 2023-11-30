@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>About Page</h1>
+	A Masters project by Carmen Reep.<br><br>
+	This drug repurposing app finds candidate compounds for a symptom of a specific rare disease.<br>
+	For this, it uses a workflow that has four main steps:<br><br>
+	<ol>
+	<li>Creation of an RDF knowledge graph by selecting a subnetwork from Monarch Initiative, adding drugs using the DGIdb database, creating drug-drug edges based on drug compound structure similarity.<br><br>
+	<li>Graph embedding using RDF2Vec.<br><br>
+	<li>Creation of edge representations (=training/test data) by fusing drug and gene feature vectors.<br><br>
+	<li>Training an XGBoost machine learning model which is evaluated using repeated stratified 10-fold cross validation, where the best model is used to predict unknown drug-gene interactions of interest.
+	</ol>
+{% endblock content %}

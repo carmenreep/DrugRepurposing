@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Disease of interest:</h3>
+	<fieldset class="form-group">
+	<h2>{{ diseasename }}</h2>
+	(Note: after selecting a symptom, a new graph is created and a machine learning model is trained, which takes some time. Please be patient.)
+	<div class="form-group">
+              <form method="POST" action="">
+                  
+                  {{ form.hidden_tag() }}
+                  {{ form.symptoms.label }}
+                  {{ form.symptoms }}
+                  <button type="submit" class="btn">Get predictions</button>
+              </form>
+	</div>
+	</fieldset>
+
+{% endblock content %}

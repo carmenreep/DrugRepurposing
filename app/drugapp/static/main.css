@@ -1,0 +1,79 @@
+body {
+  background: white;
+  color: #05386B;
+  margin-top: 5rem;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #05386B;
+}
+
+.bg-steel {
+  background-color: #379683;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: white;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #5CDB95;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+
+
+.btn {
+
+  color: #05386B;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.btn:hover {
+  background: #8EE4AF;
+  color: #05386B;
+}
+
+.mystyle {
+    font-size: 11pt; 
+    font-family: Arial;
+    border-collapse: collapse; 
+    text-align: left;
+    border: 1px solid #dddddd;
+	border-radius: 3px;
+
+}
+
+.mystyle thead th {
+  background-color: #F8F8F8;
+  color: #05386B;
+}
+
+.mystyle td, th {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+.mystyle tr:hover {
+    cursor: pointer;
+    background-color: #F8F8F8
+}
